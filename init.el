@@ -7,6 +7,9 @@
 			 ("elpa" . "https://elpa.gnu.org/packages/")))
 (package-initialize)
 
+(unless package-archive-contents
+  (package-refresh-contents))
+
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
@@ -37,23 +40,10 @@
 (setq make-backup-files nil)
 
 ;; Run the command below while loading this config on a new machine
-;; M-x all-the-icons-install-fonts
-;; (use-package all-the-icons)
-
-;; Run the command below while loading this config on a new machine
 ;; M-x nerd-icons-install-fonts
 (use-package nerd-icons)
 
-;; (use-package doom-modeline
-;;   :ensure t
-;;   :init (doom-modeline-mode 1)
-;;   :custom ((doom-modeline-env-version nil)
-;; 	   (doom-modeline-github t)))
-
-;; (use-package doom-modeline
-;;   :config
-;;   (doom-modeline-mode))
-
+;; Fancy and fast mode-line with doom-modeline
 (use-package doom-modeline
   :ensure t
   :init (doom-modeline-mode 1)
@@ -62,10 +52,10 @@
 ;; Load AUCTeX
 ;; (use-package auctex)
 
+;; A Git Porcelain inside Emacs
+(use-package magit
+  :ensure t)
+
 ;; Org-mode stuff
 
 ;; Programming and coding functions
-
-;; Mail management
-
-;; Miscellaneous stuff
