@@ -1,4 +1,4 @@
-% Created 2025-04-02 mer. 12:10
+% Created 2025-04-02 mer. 15:07
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -31,10 +31,10 @@
 
 
 \section{Basic Org-mode Usage}
-\label{sec:org443f9ea}
+\label{sec:org281265e}
 
 \subsection{Headings and Subheadings}
-\label{sec:org24e62ac}
+\label{sec:org0bec0dc}
 Use asterisks to create headings:
 \begin{verbatim}
 * Main Heading
@@ -43,10 +43,11 @@ Use asterisks to create headings:
 \end{verbatim}
 
 \subsection{Lists}
-\label{sec:org5046039}
+\label{sec:orgbf32bd8}
 \begin{itemize}
 \item Bullet list item 1
 \item Bullet list item 2
+\item Bullet list item 3
 \begin{itemize}
 \item Nested item
 \end{itemize}
@@ -55,14 +56,15 @@ Use asterisks to create headings:
 \end{itemize}
 
 \subsection{Formatting}
-\label{sec:org1299e01}
+\label{sec:orgd0a226b}
 \textbf{Bold}, \emph{Italic}, \uline{Underline}, \texttt{Monospace}, \texttt{Inline Code}
 
+
 \section{Task Management}
-\label{sec:org608c041}
+\label{sec:orgbce34fa}
 
 \subsection{{\bfseries\sffamily TODO} States}
-\label{sec:org826fd3f}
+\label{sec:org6400089}
 \begin{itemize}
 \item TODO Write tutorial
 \item IN-PROGRESS Edit tutorial
@@ -70,32 +72,37 @@ Use asterisks to create headings:
 \end{itemize}
 
 \subsection{Priorities \& Deadlines}
-\label{sec:orgf50cfc5}
+\label{sec:org1b38222}
 \begin{itemize}
 \item\relax [\#A] Urgent task
 \item DEADLINE: \textit{<2025-04-05 sam.>}
 \end{itemize}
 
+
 \section{Agenda Views}
-\label{sec:orgaad47fb}
+\label{sec:org6253fb0}
 \begin{verbatim}
 (setq org-agenda-files '("~/tuto_emacs/tasks.org"))
 \end{verbatim}
 Access agenda with \texttt{C-c a a}
 
+
 \section{Tables and Spreadsheets}
-\label{sec:orgc6221d1}
+\label{sec:orgca594f3}
 \begin{center}
-\begin{tabular}{lr}
-Task & Time (hours)\\
+\begin{tabular}{lrr}
+Task & Time (hours) & Price (€)\\
 \hline
-Edit & 2.5\\
-Write & 4.0\\
+Edit & 2.5 & 2.0\\
+Write & 4.0 & 3.0\\
+ &  & \\
 \end{tabular}
 \end{center}
 
+
 \section{Code Execution}
-\label{sec:org0377ea1}
+\label{sec:org36baa69}
+Execute code section with \texttt{C-c C-c}
 \begin{verbatim}
 import numpy as np
 import matplotlib.pyplot as plt
@@ -108,10 +115,10 @@ plt.savefig('python-fig.png')
 return 'python-fig.png'
 \end{verbatim}
 
-Execute with \texttt{C-c C-c}
+
 
 \section{Exporting}
-\label{sec:orga332495}
+\label{sec:org033c76e}
 Export using \texttt{C-c C-e}:
 \begin{itemize}
 \item \texttt{C-c C-e h o} (HTML)

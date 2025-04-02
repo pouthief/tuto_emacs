@@ -16,9 +16,10 @@
 ** Lists
    - Bullet list item 1
    - Bullet list item 2
+   - Bullet list item 3
      - Nested item
-   1. Numbered item 1
-   2. Numbered item 2
+   - Numbered item 1
+   - Numbered item 2
       
 ** Formatting
    *Bold*, /Italic/, _Underline_, =Monospace=, ~Inline Code~
@@ -49,10 +50,11 @@
 
    
 * Tables and Spreadsheets
-   | Task  | Time (hours) |
-   |-------+-------------|
-   | Edit  |         2.5 |
-   | Write |         4.0 |
+   | Task  | Time (hours) | Price (€) |
+   |-------+--------------+-----------|
+   | Edit  |          2.5 |       2.0 |
+   | Write |          4.0 |       3.0 |
+   |       |              |           |
    #+TBLFM: @2$2 + @3$2
 
    
