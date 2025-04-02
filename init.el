@@ -49,13 +49,11 @@
   :init (doom-modeline-mode 1)
   :custom ((doom-modeline-github t)))
 
-;; Load AUCTeX
-;; (use-package auctex)
-
 ;; A Git Porcelain inside Emacs
 (use-package magit
   :ensure t)
 
-;; Org-mode stuff
-
-;; Programming and coding functions
+;; Use Python language in org-mode
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((python . t)))
