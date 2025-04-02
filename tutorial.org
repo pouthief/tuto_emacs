@@ -1,0 +1,66 @@
+#+TITLE: Emacs Org-mode Tutorial
+#+AUTHOR: Florian Pouthier
+#+DATE: <2025-04-02>
+#+OPTIONS: toc:t
+
+* Basic Org-mode Usage
+
+** Headings and Subheadings
+   Use asterisks to create headings:
+   #+BEGIN_EXAMPLE
+   * Main Heading
+   ** Subheading
+   *** Sub-subheading
+   #+END_EXAMPLE
+
+** Lists
+   - Bullet list item 1
+   - Bullet list item 2
+     - Nested item
+   1. Numbered item 1
+   2. Numbered item 2
+
+** Formatting
+   *Bold*, /Italic/, _Underline_, =Monospace=, ~Inline Code~
+
+* Task Management
+
+** TODO States
+   #+TODO: TODO IN-PROGRESS | DONE CANCELED
+
+   - TODO Write tutorial
+   - IN-PROGRESS Edit tutorial
+   - DONE Publish tutorial
+
+** Priorities & Deadlines
+   #+PRIORITIES: A B C
+
+   - [#A] Urgent task
+   - DEADLINE: <2025-04-05>
+
+* Agenda Views
+   #+TODO: TODO IN-PROGRESS WAITING | DONE CANCELED
+   #+BEGIN_SRC emacs-lisp
+   (setq org-agenda-files '("~/org/tasks.org"))
+   #+END_SRC
+   Access agenda with =C-c a a=
+
+* Tables and Spreadsheets
+   | Task  | Time (hours) |
+   |-------+-------------|
+   | Edit  |         2.5 |
+   | Write |         4.0 |
+   #+TBLFM: @2$2 + @3$2
+
+* Code Execution
+   #+BEGIN_SRC python
+   print("Hello, Org-mode!")
+   #+END_SRC
+
+   Execute with =C-c C-c=
+
+* Exporting
+   Export using =C-c C-e=:
+   - =C-c C-e h o= (HTML)
+   - =C-c C-e l p= (PDF)
+   - =C-c C-e m m= (Markdown)

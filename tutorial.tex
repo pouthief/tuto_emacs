@@ -1,0 +1,113 @@
+% Created 2025-04-02 mer. 10:58
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Florian Pouthier}
+\date{\textit{<2025-04-02 mer.>}}
+\title{Emacs Org-mode Tutorial}
+\hypersetup{
+ pdfauthor={Florian Pouthier},
+ pdftitle={Emacs Org-mode Tutorial},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.2.50 (Org mode 9.4.4)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{Basic Org-mode Usage}
+\label{sec:orgc41cb7a}
+
+\subsection{Headings and Subheadings}
+\label{sec:org75f6ccf}
+Use asterisks to create headings:
+\begin{verbatim}
+* Main Heading
+** Subheading
+*** Sub-subheading
+\end{verbatim}
+
+\subsection{Lists}
+\label{sec:orgbff6cfc}
+\begin{itemize}
+\item Bullet list item 1
+\item Bullet list item 2
+\begin{itemize}
+\item Nested item
+\end{itemize}
+\item Numbered item 1
+\item Numbered item 2
+\end{itemize}
+
+\subsection{Formatting}
+\label{sec:org4c681b0}
+\textbf{Bold}, \emph{Italic}, \uline{Underline}, \texttt{Monospace}, \texttt{Inline Code}
+
+\section{Task Management}
+\label{sec:org6d90646}
+
+\subsection{{\bfseries\sffamily TODO} States}
+\label{sec:org735669b}
+\begin{itemize}
+\item TODO Write tutorial
+\item IN-PROGRESS Edit tutorial
+\item DONE Publish tutorial
+\end{itemize}
+
+\subsection{Priorities \& Deadlines}
+\label{sec:org872f9f2}
+\begin{itemize}
+\item\relax [\#A] Urgent task
+\item DEADLINE: \textit{<2025-04-05 sam.>}
+\end{itemize}
+
+\section{Agenda Views}
+\label{sec:org136cc7d}
+\begin{verbatim}
+(setq org-agenda-files '("~/org/tasks.org"))
+\end{verbatim}
+Access agenda with \texttt{C-c a a}
+
+\section{Tables and Spreadsheets}
+\label{sec:orgf5d1b3c}
+\begin{center}
+\begin{tabular}{lr}
+Task & Time (hours)\\
+\hline
+Edit & 2.5\\
+Write & 4.0\\
+\end{tabular}
+\end{center}
+
+\section{Code Execution}
+\label{sec:org4664773}
+\begin{verbatim}
+print("Hello, Org-mode!")
+\end{verbatim}
+
+Execute with \texttt{C-c C-c}
+
+\section{Exporting}
+\label{sec:orgde84faf}
+Export using \texttt{C-c C-e}:
+\begin{itemize}
+\item \texttt{C-c C-e h o} (HTML)
+\item \texttt{C-c C-e l p} (PDF)
+\item \texttt{C-c C-e m m} (Markdown)
+\end{itemize}
+\end{document}
