@@ -19,10 +19,11 @@
      - Nested item
    1. Numbered item 1
    2. Numbered item 2
-
+      
 ** Formatting
    *Bold*, /Italic/, _Underline_, =Monospace=, ~Inline Code~
 
+   
 * Task Management
 
 ** TODO States
@@ -38,13 +39,15 @@
    - [#A] Urgent task
    - DEADLINE: <2025-04-05>
 
+     
 * Agenda Views
    #+TODO: TODO IN-PROGRESS WAITING | DONE CANCELED
    #+BEGIN_SRC emacs-lisp
-   (setq org-agenda-files '("~/org/tasks.org"))
+   (setq org-agenda-files '("~/tuto_emacs/tasks.org"))
    #+END_SRC
    Access agenda with =C-c a a=
 
+   
 * Tables and Spreadsheets
    | Task  | Time (hours) |
    |-------+-------------|
@@ -52,12 +55,25 @@
    | Write |         4.0 |
    #+TBLFM: @2$2 + @3$2
 
+   
 * Code Execution
-   #+BEGIN_SRC python
-   print("Hello, Org-mode!")
-   #+END_SRC
+  Execute code section with =C-c C-c=
+  #+BEGIN_SRC python :results file link
+    import numpy as np
+    import matplotlib.pyplot as plt
 
-   Execute with =C-c C-c=
+    fig = plt.figure(figsize=(4,2))
+    x = np.linspace(-15,15,200)
+    plt.plot(np.sin(x)/x)
+
+    plt.savefig('python-fig.png')
+    return 'python-fig.png'
+  #+END_SRC
+
+   #+RESULTS:
+   [[file:python-fig.png]]
+
+   
 
 * Exporting
    Export using =C-c C-e=:

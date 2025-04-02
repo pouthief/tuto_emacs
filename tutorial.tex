@@ -1,4 +1,4 @@
-% Created 2025-04-02 mer. 10:58
+% Created 2025-04-02 mer. 12:10
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -31,10 +31,10 @@
 
 
 \section{Basic Org-mode Usage}
-\label{sec:orgc41cb7a}
+\label{sec:org443f9ea}
 
 \subsection{Headings and Subheadings}
-\label{sec:org75f6ccf}
+\label{sec:org24e62ac}
 Use asterisks to create headings:
 \begin{verbatim}
 * Main Heading
@@ -43,7 +43,7 @@ Use asterisks to create headings:
 \end{verbatim}
 
 \subsection{Lists}
-\label{sec:orgbff6cfc}
+\label{sec:org5046039}
 \begin{itemize}
 \item Bullet list item 1
 \item Bullet list item 2
@@ -55,14 +55,14 @@ Use asterisks to create headings:
 \end{itemize}
 
 \subsection{Formatting}
-\label{sec:org4c681b0}
+\label{sec:org1299e01}
 \textbf{Bold}, \emph{Italic}, \uline{Underline}, \texttt{Monospace}, \texttt{Inline Code}
 
 \section{Task Management}
-\label{sec:org6d90646}
+\label{sec:org608c041}
 
 \subsection{{\bfseries\sffamily TODO} States}
-\label{sec:org735669b}
+\label{sec:org826fd3f}
 \begin{itemize}
 \item TODO Write tutorial
 \item IN-PROGRESS Edit tutorial
@@ -70,21 +70,21 @@ Use asterisks to create headings:
 \end{itemize}
 
 \subsection{Priorities \& Deadlines}
-\label{sec:org872f9f2}
+\label{sec:orgf50cfc5}
 \begin{itemize}
 \item\relax [\#A] Urgent task
 \item DEADLINE: \textit{<2025-04-05 sam.>}
 \end{itemize}
 
 \section{Agenda Views}
-\label{sec:org136cc7d}
+\label{sec:orgaad47fb}
 \begin{verbatim}
-(setq org-agenda-files '("~/org/tasks.org"))
+(setq org-agenda-files '("~/tuto_emacs/tasks.org"))
 \end{verbatim}
 Access agenda with \texttt{C-c a a}
 
 \section{Tables and Spreadsheets}
-\label{sec:orgf5d1b3c}
+\label{sec:orgc6221d1}
 \begin{center}
 \begin{tabular}{lr}
 Task & Time (hours)\\
@@ -95,15 +95,23 @@ Write & 4.0\\
 \end{center}
 
 \section{Code Execution}
-\label{sec:org4664773}
+\label{sec:org0377ea1}
 \begin{verbatim}
-print("Hello, Org-mode!")
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig = plt.figure(figsize=(4,2))
+x = np.linspace(-15,15,200)
+plt.plot(np.sin(x)/x)
+
+plt.savefig('python-fig.png')
+return 'python-fig.png'
 \end{verbatim}
 
 Execute with \texttt{C-c C-c}
 
 \section{Exporting}
-\label{sec:orgde84faf}
+\label{sec:orga332495}
 Export using \texttt{C-c C-e}:
 \begin{itemize}
 \item \texttt{C-c C-e h o} (HTML)
